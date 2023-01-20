@@ -7,8 +7,8 @@ import LoadingBar from 'react-redux-loading-bar';
 
 import { Home, Brand } from './header-components';
 import { AdminMenu, EntitiesMenu, AccountMenu, LocaleMenu } from '../menus';
-import { useAppDispatch } from 'app/config/store';
-import { setLocale } from 'app/shared/reducers/locale';
+import { useAppDispatch } from '../../../config/store';
+import { setLocale } from '../../../shared/reducers/locale';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -33,9 +33,9 @@ const Header = (props: IHeaderProps) => {
   const renderDevRibbon = () =>
     props.isInProduction === false ? (
       <div className="ribbon dev">
-        <a href="">
+        {/* <a href="">
           <Translate contentKey={`global.ribbon.${props.ribbonEnv}`} />
-        </a>
+        </a> */}
       </div>
     ) : null;
 

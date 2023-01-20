@@ -4,8 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert } from 'reactstrap';
-
-import { useAppSelector } from 'app/config/store';
+import { useAppSelector } from '../../config/store';
 
 export const Home = () => {
   const account = useAppSelector(state => state.authentication.account);
@@ -13,15 +12,12 @@ export const Home = () => {
   return (
     <Row>
       <Col md="3" className="pad">
-        <span className="hipster rounded" />
+        <span className="hipster" />
       </Col>
       <Col md="9">
         <h2>
-          <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
+          <Translate contentKey="home.title">Welcome, Online Exam!</Translate>
         </h2>
-        <p className="lead">
-          <Translate contentKey="home.subtitle">This is your homepage</Translate>
-        </p>
         {account?.login ? (
           <div>
             <Alert color="success">
@@ -59,39 +55,31 @@ export const Home = () => {
 
         <ul>
           <li>
-            <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.homepage">JHipster homepage</Translate>
-            </a>
+            <p>
+              Create unlimited tests/exams in different formats with our online exam software. The administrator of online exam software can
+              create a test by selecting the questions from the question bank.
+            </p>
           </li>
           <li>
-            <a href="https://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.stackoverflow">JHipster on Stack Overflow</Translate>
-            </a>
+            <p>
+              Once the test is ready, it can be scheduled at a defined date and time to make it active. It is effortless to add/import
+              different types of questions from pdf, word, and excel through the best online exam software.
+            </p>
           </li>
           <li>
-            <a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.bugtracker">JHipster bug tracker</Translate>
-            </a>
+            <p>
+              Our online exam website supports various exam formats like multiple choices, multiple choices with multiple answers, fill in
+              the blanks, true & false, essay, matrix match, match the following, etc.
+            </p>
           </li>
           <li>
-            <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.chat">JHipster public chat room</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.follow">follow @jhipster on Twitter</Translate>
-            </a>
+            <p>
+              One can also get study material in different formats like images, tutorial videos, etc. Questions can be added under different
+              subjects, lessons, and sub lessons; also, random/shuffle questions are also available in test settings. ConductExam also
+              supports questions in multiple languages, and one can take a test in their regional language also.
+            </p>
           </li>
         </ul>
-
-        <p>
-          <Translate contentKey="home.like">If you like JHipster, do not forget to give us a star on</Translate>{' '}
-          <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          !
-        </p>
       </Col>
     </Row>
   );
